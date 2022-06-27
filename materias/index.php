@@ -1,7 +1,6 @@
 <?php
-require_once("../lib/connect.php");
-$consulta="SELECT * FROM materias";
-$resultado = mysqli_query($connect, $consulta);
+require_once("../lib/functions.php");
+$materias = get_all_materias($connect);
 
 ?>
 
@@ -14,7 +13,10 @@ $resultado = mysqli_query($connect, $consulta);
     <title>Materias - escuela</title>
 </head>
 <body>
-<center><h1>Materias<small><a href="#">Crear materia</a></small></h1></center>
+<center><h1>Materias - Universidad UNID<small>
+    <a href="insert.php"><p style="text-align:center">Crear materia</p>
+    <a href="../index.php"><p style="text-align:center">MENÚ</p></a></a></small></h1>
+</center>
 <center>
     <table>
         <thead>
@@ -28,7 +30,7 @@ $resultado = mysqli_query($connect, $consulta);
 
         <tbody>
             <?php
-            while($fila = mysqli_fetch_array($resultado))
+            while($fila = mysqli_fetch_array($materias))
             {
             ?>
             <tr>
@@ -36,6 +38,10 @@ $resultado = mysqli_query($connect, $consulta);
                 <td><?php echo $fila['nombre']?></td>
                 <td><?php echo $fila['licenciatura']?></td>
                 <td><?php echo $fila['cuatrimestre']?></td>
+
+                <td><a href=detail.php?id=<?php echo $fila['id'] ?>>Detalles</a></td>
+                <td><a href=#>Editar</a></td>
+                <td><a href=#>Eliminar</a></td>
             </tr>
             <?php
             }
