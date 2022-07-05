@@ -13,15 +13,34 @@ require_once("../lib/functions.php");
 
 <body>
     <center>
-        <h1>Crear materia<small><a href="index.php"><p style="text-align:center">Volver al listado de materias</p></a></small></h1>
+        <h1>Crear materia<small><a href="index.php"><h4 style="text-align:center">Volver al listado de materias</h4></a></small></h1>
     </center>
+    <style>
+    p {color:red;
+       font-weight: bolder;
+      }
+    </style>
 
     <center>
-        <form action="" style="background-color:#E6E6FA; width:25%; padding:1%;">
-                <p>Nombre: <input type="text" name="nombre"/></p>
-                <p>Licenciatura: <input type="text" name="lic"/></p>
-                <p>Cuatrimestre: <input type="text" name="cuatri"/></p>
-                <p><input type="submit" value="AÑADIR MATERIA"/></p>
+        <form action="update.php" method="POST" style="background-color:#E6E6FA; width:25%; padding:1%;">
+ 
+                <div class="elemento">
+                <label for="nombre">Nombre:</label><br><br>
+                <input type="text" name="nombre"/>
+              </div>
+
+              <div class="elemento">
+              <br><label for="licenciatura">Licenciatura:</label><br><br>
+                <input type="text" name="licenciatura"/>
+              </div>
+
+              <div class="elemento">
+              <br><label for="cuatrimestre">cuatrimestre:</label><br><br>
+                <input type="text" name="cuatrimestre"/>
+              </div>
+
+              <br><br>
+              <button type="submit" name="submit">AÑADIR MATERIA</button>
         </form>
     </center>
 </body>

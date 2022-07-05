@@ -13,16 +13,50 @@ require_once("../lib/functions.php");
 
 <body>
     <center>
-        <h1>Crear profesor<small><a href="index.php"><p style="text-align:center">Volver al listado de profesores</p></a></small></h1>
+        <h1>Crear profesor<small><a href="index.php"><h4 style="text-align:center">Volver al listado de profesores</h4></a></small></h1>
     </center>
 
     <center>
-        <form action="" style="background-color:#E6E6FA; width:25%; padding:1%;">
-        <p>Nombre: <input type="text" name="nombre"/></p>
-        <p>Apellidos: <input type="text" name="apellido"/></p>
-        <p>Teléfono: <input type="text" name="telefono"/></p>
-        <p>Correo electrónico: <input type="text" name="correo"/></p>
-        <p><input type="submit" value="AÑADIR PROFESOR"/></p>
+    <style>
+    p {color:red;
+       font-weight: bolder;
+      }
+    </style>
+
+        <form action="update.php" method="POST" style="background-color:#E6E6FA; width:25%; padding:1%;">
+
+        <div class="elemento">
+            <label for="nombre">Nombre:</label><br><br>
+            <input type="text" name="nombre"/>
+        </div>
+
+        <div class="elemento">
+        <br><label for="apellido">Apellido:</label><br><br>
+            <input type="text" name="apellido"/>
+        </div>
+
+        <div class="elemento">
+        <br><label for="telefono">Teléfono:</label><br><br>
+            <input type="text" name="telefono"/>
+        </div>
+
+        <div class="elemento">
+        <br><label for="correo">Correo electrónico:</label><br><br>
+            <input type="text" name="correo"/>
+        </div>
+
+        <div class="elemento">
+        <br><label for="estatus">estatus:</label><br><br>
+            <input type="text" name="estatus"/>
+        </div>
+
+              <br><br>
+              <button type="submit" name="submit">AÑADIR PROFESOR</button>
+
+
+
+
+        
         </form>
     </center>
 </body>
