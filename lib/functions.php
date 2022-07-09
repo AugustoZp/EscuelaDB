@@ -54,7 +54,7 @@ function insertar_alumnos($nombre, $apellidos, $telefono, $correo, $licenciatura
 global $connect;
 $consulta="INSERT INTO alumnos(nombre,apellidos,telefono,correo,licenciatura,cuatrimestre,estatus) values('$nombre','$apellidos','$telefono','$correo','$licenciatura','$cuatrimestre','$estatus')";
 $resultado = mysqli_query($connect, $consulta);
-//return $resultado;
+    //return $resultado;
 }
 
 //FUNCIONES DE INSERTAR NUEVO PROFESOR//

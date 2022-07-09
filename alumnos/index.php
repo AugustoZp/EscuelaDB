@@ -13,7 +13,7 @@ $alumnos = get_all_alumnos($connect);
 </head>
 <body>
 <center><h1>Alumnos - Universidad UNID<small>
-    <a href="insert.php"><p style="text-align:center">Crear alumno</p></a>
+    <a href="form.php"><p style="text-align:center">Crear alumno</p></a>
     <a href="../index.php"><p style="text-align:center">MENÚ</p></a></small></h1>
 </center>
 <center>

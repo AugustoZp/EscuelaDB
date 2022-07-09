@@ -14,7 +14,7 @@ $materias = get_all_materias($connect);
 </head>
 <body>
 <center><h1>Materias - Universidad UNID<small>
-    <a href="insert.php"><p style="text-align:center">Crear materia</p>
+    <a href="form.php"><p style="text-align:center">Crear materia</p>
     <a href="../index.php"><p style="text-align:center">MENÚ</p></a></a></small></h1>
 </center>
 <center>
