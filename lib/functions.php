@@ -15,7 +15,7 @@ $resultado = mysqli_query($connect, $consulta);
 return $resultado;
 }
 
-////////////////////////
+////////////////////////////////////////////////
 
 //FUNCIONES DE PROFESORES//
 function get_all_profesores($connect){
@@ -31,7 +31,7 @@ $resultado = mysqli_query($connect, $consulta);
 return $resultado;
 }
 
-////////////////////////
+////////////////////////////////////////////////
 
 //FUNCIONES DE MATERIAS//
 function get_all_materias($connect){
@@ -47,7 +47,7 @@ $resultado = mysqli_query($connect, $consulta);
 return $resultado;
 }
 
-////////////////////////
+////////////////////////////////////////////////
 
 //FUNCIONES DE INSERTAR NUEVO ALUMNO//
 function insertar_alumnos($nombre, $apellidos, $telefono, $correo, $licenciatura, $cuatrimestre, $estatus){
@@ -71,5 +71,31 @@ function insertar_materia($nombre, $licenciatura,$cuatrimestre){
     $consulta="INSERT INTO materias(nombre,licenciatura,cuatrimestre) values('$nombre','$licenciatura','$cuatrimestre')";
     $resultado = mysqli_query($connect, $consulta);
     //return $resultado;
+    }
+
+////////////////////////////////////////////////
+
+//FUNCIONES DE ELIMINAR ALUMNO//
+function eliminar_alumnos($id){
+    global $connect;
+    $consulta="DELETE FROM alumnos WHERE id = $id";
+    $resultado = mysqli_query($connect, $consulta);
+        //return $resultado;
+    }
+
+//FUNCIONES DE ELIMINAR PROFESOR//
+function eliminar_profesores($id){
+    global $connect;
+    $consulta="DELETE FROM profesores WHERE id = $id";
+    $resultado = mysqli_query($connect, $consulta);
+        //return $resultado;
+    }
+
+//FUNCIONES DE ELIMINAR MATERIA//
+function eliminar_materias($id){
+    global $connect;
+    $consulta="DELETE FROM materias WHERE id = $id";
+    $resultado = mysqli_query($connect, $consulta);
+        //return $resultado;
     }
 ?>

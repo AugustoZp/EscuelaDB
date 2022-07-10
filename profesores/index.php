@@ -45,7 +45,7 @@ $profesores = get_all_profesores($connect);
 
                 <td><a href=detail.php?id=<?php echo $fila['id'] ?>>Detalles</a></td>
                 <td><a href=#>Editar</a></td>
-                <td><a href=#>Eliminar</a></td>
+                <td><a href=delete.php?id=<?php echo $fila['id'] ?>>Eliminar</a></td>
             </tr>
             <?php
             }
