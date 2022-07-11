@@ -75,6 +75,32 @@ function insertar_materia($nombre, $licenciatura,$cuatrimestre){
 
 ////////////////////////////////////////////////
 
+//FUNCIONES DE ACTUALIZAR ALUMNO//
+Function update_alumno($nombre, $apellidos, $telefono, $correo, $licenciatura, $cuatrimestre, $estatus, $id){
+    global $connect;
+    $consulta= "UPDATE alumnos SET nombre='$nombre', apellidos='$apellidos', telefono='$telefono', correo='$correo', licenciatura='$licenciatura', cuatrimestre='$cuatrimestre', estatus='$estatus' WHERE  id = $id";
+    $resultado = mysqli_query($connect, $consulta);
+    return $resultado;
+}
+
+//FUNCIONES DE ACTUALIZAR PROFESOR//
+Function update_profesor($nombre, $apellido, $telefono, $correo, $estatus, $id){
+    global $connect;
+    $consulta= "UPDATE profesores SET nombre='$nombre', apellido='$apellido', telefono='$telefono', correo='$correo', estatus='$estatus' WHERE  id = $id";
+    $resultado = mysqli_query($connect, $consulta);
+    return $resultado;
+}
+
+//FUNCIONES DE ACTUALIZAR MATERIA//
+Function update_materia($nombre, $licenciatura, $cuatrimestre, $id){
+    global $connect;
+    $consulta= "UPDATE materias SET nombre='$nombre', licenciatura='$licenciatura', cuatrimestre='$cuatrimestre' WHERE  id = $id";
+    $resultado = mysqli_query($connect, $consulta);
+    return $resultado;
+}
+
+////////////////////////////////////////////////
+
 //FUNCIONES DE ELIMINAR ALUMNO//
 function eliminar_alumnos($id){
     global $connect;
@@ -98,4 +124,8 @@ function eliminar_materias($id){
     $resultado = mysqli_query($connect, $consulta);
         //return $resultado;
     }
+
+////////////////////////////////////////////////
+
+//FUNCIONES DE //
 ?>
